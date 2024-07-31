@@ -1,0 +1,22 @@
+<div class="d-flex mt-5 justify-content-center">
+    @for (product of products; track $index) {
+    <div class="card me-5 position-relative" style="width: 18rem">
+      <span class="recommend bg-warning p-1 start-0 position-absolute"
+        >recommended</span
+      >
+  
+      <img [src]="product.image" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">
+          {{ product.description }}
+        </p>
+        <span class="d-block mb-2"
+          >Price: <strong>{{ product.price }}$</strong>
+        </span>
+        <a href="#" class="btn btn-primary">Add to cart</a>
+      </div>
+    </div>
+    }
+  </div>
+  
